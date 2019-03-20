@@ -22,6 +22,10 @@
 		DE6440D321E57B4C00846EB4 /* EGLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6440D221E57B4C00846EB4 /* EGLoginViewController.swift */; };
 		DE6440D721E57C0E00846EB4 /* EGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6440D621E57C0E00846EB4 /* EGHomeViewController.swift */; };
 		DE6440DA21E57D3B00846EB4 /* EGMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6440D921E57D3B00846EB4 /* EGMenuTableViewController.swift */; };
+		DE795DA8221BB52000E21BB4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE795DA7221BB52000E21BB4 /* Constants.swift */; };
+		DE795DAA221BB91500E21BB4 /* EGRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE795DA9221BB91500E21BB4 /* EGRegistrationViewController.swift */; };
+		DE795DAC221BB98C00E21BB4 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE795DAB221BB98C00E21BB4 /* UITextField+.swift */; };
+		DE795DAE221BCC7400E21BB4 /* EGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE795DAD221BCC7400E21BB4 /* EGNavigationController.swift */; };
 		DEF9BF0721E426440067C880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9BF0621E426440067C880 /* AppDelegate.swift */; };
 		DEF9BF0C21E426440067C880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF9BF0A21E426440067C880 /* Main.storyboard */; };
 		DEF9BF0E21E426450067C880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF9BF0D21E426450067C880 /* Assets.xcassets */; };
@@ -66,6 +70,10 @@
 		DE6440D221E57B4C00846EB4 /* EGLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGLoginViewController.swift; sourceTree = "<group>"; };
 		DE6440D621E57C0E00846EB4 /* EGHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGHomeViewController.swift; sourceTree = "<group>"; };
 		DE6440D921E57D3B00846EB4 /* EGMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGMenuTableViewController.swift; sourceTree = "<group>"; };
+		DE795DA7221BB52000E21BB4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DE795DA9221BB91500E21BB4 /* EGRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGRegistrationViewController.swift; sourceTree = "<group>"; };
+		DE795DAB221BB98C00E21BB4 /* UITextField+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		DE795DAD221BCC7400E21BB4 /* EGNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGNavigationController.swift; sourceTree = "<group>"; };
 		DEF9BF0321E426440067C880 /* Ergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9BF0621E426440067C880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9BF0B21E426440067C880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 		DE5C728C21FFACA60004E6B8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DE795DAB221BB98C00E21BB4 /* UITextField+.swift */,
 				DE5C72C921FFB0DF0004E6B8 /* UIColor+.swift */,
 				DE5C72CB21FFC5400004E6B8 /* EGGoogleDriveViewControlle+FloatingButton.swift */,
 			);
@@ -159,6 +168,7 @@
 		DE6440D121E57B2E00846EB4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DE795DAD221BCC7400E21BB4 /* EGNavigationController.swift */,
 				DE6440D421E57BCD00846EB4 /* Login */,
 				DE6440D521E57BDA00846EB4 /* Home */,
 			);
@@ -169,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				DE6440D221E57B4C00846EB4 /* EGLoginViewController.swift */,
+				DE795DA9221BB91500E21BB4 /* EGRegistrationViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				DEF9BF0621E426440067C880 /* AppDelegate.swift */,
+				DE795DA7221BB52000E21BB4 /* Constants.swift */,
 				DE5C728C21FFACA60004E6B8 /* Extensions */,
 				DE6440D121E57B2E00846EB4 /* ViewControllers */,
 				DE1F272A21E6C68D006792B2 /* Libraries */,
@@ -468,8 +480,11 @@
 				DE6440D321E57B4C00846EB4 /* EGLoginViewController.swift in Sources */,
 				DE0EDDE321ED304D00456D3A /* EGShowImageViewController.swift in Sources */,
 				DE1F272C21E6C6A1006792B2 /* EGGoogleDrive.swift in Sources */,
+				DE795DAE221BCC7400E21BB4 /* EGNavigationController.swift in Sources */,
 				DE6440D721E57C0E00846EB4 /* EGHomeViewController.swift in Sources */,
 				DE6440DA21E57D3B00846EB4 /* EGMenuTableViewController.swift in Sources */,
+				DE795DA8221BB52000E21BB4 /* Constants.swift in Sources */,
+				DE795DAC221BB98C00E21BB4 /* UITextField+.swift in Sources */,
 				DE5C728921FFA7B80004E6B8 /* EGButton.swift in Sources */,
 				DEF9BF0721E426440067C880 /* AppDelegate.swift in Sources */,
 				DE5C728521FFA6780004E6B8 /* EGButtonLayer.swift in Sources */,
@@ -479,6 +494,7 @@
 				DE5C72CC21FFC5400004E6B8 /* EGGoogleDriveViewControlle+FloatingButton.swift in Sources */,
 				DE5C728721FFA7410004E6B8 /* EGOverLayView.swift in Sources */,
 				DE5C72CA21FFB0DF0004E6B8 /* UIColor+.swift in Sources */,
+				DE795DAA221BB91500E21BB4 /* EGRegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

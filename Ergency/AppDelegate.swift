@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GIDSignIn.sharedInstance().clientID = "25280379553-70rp1m4d06giip7pumcrqhfnp5sqsd7d.apps.googleusercontent.com"
+        
+        guard UserDefaults.standard.bool(forKey: USER_PROFILE_DATA) else {
+            self.showLoginView()
+            return true
+        }
+        self.showHomeView()
         return true
     }
 
@@ -51,6 +57,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication]
         let annotation = options[UIApplication.OpenURLOptionsKey.annotation]
         return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication as? String, annotation: annotation!)
+    }
+    
+    func showLoginView()  {
+        let loginStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let navigationController = loginStoryboard.instantiateInitialViewController()
+        self.window?.rootViewController = navigationController
+    }
+    
+    func showHomeView(){
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = mainStoryboard.instantiateInitialViewController()
+        self.window?.rootViewController = navigationController
     }
 }
 

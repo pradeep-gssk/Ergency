@@ -145,7 +145,7 @@ class EGButton: UIView {
         }
     }
     
-    open func add(color:UIColor = UIColor.clear, title:String? = nil, image:UIImage? = nil, handle: ((EGButtonCell)->Void)? = nil) {
+    open func add(color: UIColor = UIColor.clear, title: String? = nil, image: UIImage? = nil, handle: ((EGButtonCell)->Void)? = nil) {
         let item = EGButtonCell()
         item.buttonItemColor = color
         item.icon = image

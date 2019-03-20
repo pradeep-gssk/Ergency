@@ -44,5 +44,9 @@ extension UIColor {
             alpha: 1.0
         )
     }
+    
+    class func singleColor(value: CGFloat, alpha: CGFloat) -> UIColor {
+        return UIColor(red: (value/255.0), green: (value/255.0), blue: (value/255.0), alpha: alpha)
+    }
 }
 

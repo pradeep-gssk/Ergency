@@ -52,11 +52,11 @@ class EGGoogleDriveViewController: UIViewController {
     }
     
     func loadFloatingButton() {
-        self.floatingButton.add(color: UIColor.orange, title: "Add Folder") { (_) in
+        self.floatingButton.add(color: UIColor.white, title: "Add Folder", image: UIImage(named: "folder")) { (_) in
             self.addFolder()
         }
         
-        self.floatingButton.add(color: UIColor.orange, title: "Add Photo") { (_) in
+        self.floatingButton.add(color: UIColor.white, title: "Add Photo", image: UIImage(named: "image")) { (_) in
             self.addPhoto()
         }
     }
@@ -203,11 +203,11 @@ extension EGGoogleDriveViewController: UITableViewDataSource {
         cell.deleteButton.addTarget(self, action: #selector(EGGoogleDriveViewController.didTapDeleteButton(_:)), for: .touchUpInside)
         
         if let type = file.mimeType, type == "application/vnd.google-apps.folder" {
-            cell.fileIcon.image = UIImage(named: "folder")
+            cell.fileIcon.image = UIImage(named: "folder")?.withRenderingMode(.alwaysTemplate)
             cell.deleteButton.isHidden = true
         }
         else {
-            cell.fileIcon.image = UIImage(named: "image")
+            cell.fileIcon.image = UIImage(named: "image")?.withRenderingMode(.alwaysTemplate)
             cell.deleteButton.isHidden = false
         }
         
@@ -249,9 +249,11 @@ class EGGoogleDriveCell: UITableViewCell {
         }
     }
     
-//    @IBAction func didTapDeleteButton(_ sender: Any) {
-//
-//    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let image = UIImage(named: "delete")?.withRenderingMode(.alwaysTemplate)
+        self.deleteButton.setImage(image, for: .normal)
+    }
 }
 
 //ImagePickerController

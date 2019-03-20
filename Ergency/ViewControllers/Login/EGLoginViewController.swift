@@ -9,14 +9,20 @@
 import UIKit
 
 class EGLoginViewController: UIViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.emailTextField.desginView()
+        self.passwordTextField.desginView()
     }
     
-    @IBAction func didTapLoginButton(_ sender: Any) {
-        
+    @IBAction func didTapSignInButton(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: USER_PROFILE_DATA)
+        appDelegate.showHomeView()
     }
 }
